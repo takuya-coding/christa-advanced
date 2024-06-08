@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.header {
+    height: rem(55);
+    background-color: black;
+}
+
+.header__inner {
+    padding: 0 rem(58);
+    height: inherit;
+    display: flex;
+    // headerの場合に限り要素増えないので、justify-content: space-between;で要素の間に余白を追加している
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    height: inherit;
+}
+
+.header__logo a {
+    max-width: rem(260);
+    width: 100%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.header__logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.header__hamburger {
+    position: relative;
+    height: inherit;
+}
+
