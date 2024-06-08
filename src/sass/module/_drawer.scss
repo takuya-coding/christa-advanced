@@ -1,10 +1,19 @@
 @use "global" as *;
 
 .drawer {
+    display: none;
     // 520÷1440*100=36%
     width: 36%;
     height: 100vh;
     background-color: rgba(34, 34, 34, .95);
+    @include mq("md") {
+        width: 60%;
+    }
+}
+
+// ハンバーガーメニュークリック時の動作
+.drawer.is-active {
+    display: block;
 }
 
 .drawer__nav {
@@ -42,5 +51,8 @@
     color: $white;
     text-transform: uppercase;
     text-align: center;
+    @include mq("md") {
+        font-size: rem(16);
+    }
 }
 

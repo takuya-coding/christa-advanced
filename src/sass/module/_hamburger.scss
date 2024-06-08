@@ -4,13 +4,13 @@
     display: flex;
     align-items: center;
     padding: 0;
+    cursor: pointer;
 }
 
 .hamburger__bar-wrap {
     width: rem(22);
     height: inherit;
     display: block;
-    cursor: pointer;
 }
 
 .hamburger__bar-wrap span {
@@ -33,6 +33,25 @@
 
 .hamburger__bar-wrap span:nth-of-type(3) {
     top: 50%;
+}
+
+// ハンバーガーメニュークリック時の動作
+.hamburger.is-active .hamburger__bar-wrap span:nth-of-type(1) {
+    top: 50%;
+    transform: translateY(0) rotate(30deg);
+
+}
+
+.hamburger.is-active .hamburger__bar-wrap span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.hamburger.is-active .hamburger__bar-wrap span:nth-of-type(3) {
+    top: 46%;
+    transform: translateY(0) rotate(-30deg);
+    @include mq("md") {
+        top: 44%;
+    }
 }
 
 .hamburger__text {
