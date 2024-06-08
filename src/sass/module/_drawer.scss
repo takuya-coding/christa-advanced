@@ -1,0 +1,46 @@
+@use "global" as *;
+
+.drawer {
+    // 520÷1440*100=36%
+    width: 36%;
+    height: 100vh;
+    background-color: rgba(34, 34, 34, .95);
+}
+
+.drawer__nav {
+    padding-top: rem(180);
+    // position: relative;
+    // transform: translateX(-50%);
+}
+
+.drawer__logo {
+    max-width: rem(42.15);
+    width: 100%;
+    margin: auto;
+}
+
+.drawer__logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.drawer__items {
+    // margin-top: rem(40);
+    // aタグの余白15px分を考慮
+    margin-top: rem(25);
+}
+
+.drawer__item a {
+    display: block;
+    padding: rem(15) 0;
+    font-family: $second-font-family;
+    font-size: rem(20);
+    font-weight: $extra-bold;
+    line-height: 1;
+    letter-spacing: 0.068em;
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+}
+

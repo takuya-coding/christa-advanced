@@ -1,8 +1,11 @@
 @use "global" as *;
 
 .header {
-    height: rem(55);
+    height: rem(88);
     background-color: black;
+    @include mq("md") {
+        height: rem(60);
+    }
 }
 
 .header__inner {
@@ -12,6 +15,9 @@
     // headerの場合に限り要素増えないので、justify-content: space-between;で要素の間に余白を追加している
     justify-content: space-between;
     align-items: center;
+    @include mq("md") {
+        padding: 0 rem(15);
+    }
 }
 
 .header__logo {
@@ -24,6 +30,9 @@
     height: inherit;
     display: flex;
     align-items: center;
+    @include mq("md") {
+        max-width: rem(189);
+    }
 }
 
 .header__logo img {
@@ -35,5 +44,14 @@
 .header__hamburger {
     position: relative;
     height: inherit;
+    z-index: 999;
+}
+
+.header__drawer {
+    // display: none;
+    position: absolute;
+    z-index: 900;
+    top: 0;
+    right: 0;
 }
 
